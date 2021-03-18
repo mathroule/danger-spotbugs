@@ -5,12 +5,12 @@ require 'spotbugs/gem_version.rb'
 
 Gem::Specification.new do |spec|
   spec.name          = 'danger-spotbugs'
-  spec.version       = Spotbugs::VERSION
+  spec.version       = SpotBugs::VERSION
   spec.authors       = ['Mathieu Rul']
   spec.email         = ['mathroule@gmail.com']
-  spec.description   = %q{A short description of danger-spotbugs.}
-  spec.summary       = %q{A longer description of danger-spotbugs.}
-  spec.homepage      = 'https://github.com/Mathieu Rul/danger-spotbugs'
+  spec.description   = 'A Danger plugin for SpotBugs.'
+  spec.summary       = 'A Danger plugin for SpotBugs, see https://spotbugs.github.io.'
+  spec.homepage      = 'https://github.com/mathroule/danger-spotbugs'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)

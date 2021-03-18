@@ -16,7 +16,7 @@ module Danger
   # @see  Mathieu Rul/danger-spotbugs
   # @tags monday, weekends, time, rattata
   #
-  class DangerSpotbugs < Plugin
+  class DangerSpotBugs < Plugin
 
     # An attribute that you can read/write from your Dangerfile
     #

@@ -1,3 +1,3 @@
-module Spotbugs
+module SpotBugs
   VERSION = "0.0.1".freeze
 end
