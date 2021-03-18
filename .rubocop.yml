@@ -1,9 +1,9 @@
-# Defaults can be found here: https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+# Defaults can be found here: https://github.com/rubocop/rubocop/blob/master/config/default.yml
 
 # If you don't like these settings, just delete this file :)
 
 AllCops:
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.6
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
@@ -12,10 +12,6 @@ Style/StringLiterals:
 # kind_of? is a good way to check a type
 Style/ClassCheck:
   EnforcedStyle: kind_of?
-
-# It's better to be more explicit about the type
-Style/BracesAroundHashParameters:
-  Enabled: false
 
 # specs sometimes have useless assignments, which is fine
 Lint/UselessAssignment:
@@ -76,7 +72,7 @@ Metrics/CyclomaticComplexity:
   Max: 17
 
 # Configuration parameters: AllowURI, URISchemes.
-Metrics/LineLength:
+Layout/LineLength:
   Max: 370
 
 # Configuration parameters: CountKeywordArgs.
@@ -132,7 +128,7 @@ Metrics/ModuleLength:
 Style/MixinGrouping:
   Enabled: false
 
-Style/FileName:
+Naming/FileName:
   Enabled: false
 
 Layout/HeredocIndentation:
@@ -141,7 +137,7 @@ Layout/HeredocIndentation:
 Style/SpecialGlobalVars:
   Enabled: false
 
-PercentLiteralDelimiters:
+Style/PercentLiteralDelimiters:
   PreferredDelimiters:
     "%":  ()
     "%i": ()
