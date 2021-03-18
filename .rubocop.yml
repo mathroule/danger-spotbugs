@@ -3,7 +3,7 @@
 # If you don't like these settings, just delete this file :)
 
 AllCops:
-  TargetRubyVersion: 2.0
+  TargetRubyVersion: 2.4
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
@@ -23,10 +23,10 @@ Lint/UselessAssignment:
     - '**/spec/**/*'
 
 # We could potentially enable the 2 below:
-Layout/IndentHash:
+Layout/FirstHashElementIndentation:
   Enabled: false
 
-Layout/AlignHash:
+Layout/HashAlignment:
   Enabled: false
 
 # HoundCI doesn't like this rule
@@ -124,13 +124,18 @@ Metrics/BlockLength:
   Exclude:
     - "**/*_spec.rb"
 
+Metrics/ModuleLength:
+  Max: 100
+  Exclude:
+    - "**/*_spec.rb"
+
 Style/MixinGrouping:
   Enabled: false
 
 Style/FileName:
   Enabled: false
 
-Layout/IndentHeredoc:
+Layout/HeredocIndentation:
   Enabled: false
 
 Style/SpecialGlobalVars:
