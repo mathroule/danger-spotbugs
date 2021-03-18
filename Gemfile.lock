@@ -137,23 +137,22 @@ GEM
     yard (0.9.26)
 
 PLATFORMS
-  ruby
   x86_64-darwin-18
   x86_64-darwin-20
 
 DEPENDENCIES
   bundler (~> 2.0)
   danger-spotbugs!
-  guard (~> 2.14)
-  guard-rspec (~> 4.7)
+  guard (~> 2.16.2)
+  guard-rspec (~> 4.7.3)
   listen (= 3.0.7)
-  pry
-  rake (~> 10.0)
-  rspec (~> 3.4)
-  rubocop
-  rubocop-rake
-  rubocop-rspec
-  yard
+  pry (= 0.14.0)
+  rake (~> 10.5.0)
+  rspec (~> 3.10.0)
+  rubocop (~> 1.11.0)
+  rubocop-rake (~> 0.5.1)
+  rubocop-rspec (~> 2.2.0)
+  yard (~> 0.9.26)
 
 BUNDLED WITH
    2.2.14
