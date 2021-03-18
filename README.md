@@ -1,6 +1,10 @@
-# danger-spotbugs
+# Danger SpotBugs
 
-A description of danger-spotbugs.
+Checks on your Gradle project's Java source files.
+This is done using [SpotBugs](https://spotbugs.github.io)
+Results are passed out as tables in markdown.
+
+This plugin is inspired from https://github.com/kazy1991/danger-findbugs.
 
 ## Installation
 
