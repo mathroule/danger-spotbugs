@@ -1,0 +1,35 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Publish gem
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+          bundler-cache: true
+      - name: Run tests
+        run: bundle exec rake spec
+      - name: Publish gem
+        uses: dawidd6/action-publish-gem@v1
+        with:
+          api_key: ${{secrets.RUBYGEMS_API_KEY}}
+      - name: Create git tag
+        uses: duderman/gh-gem-tag-action@v1
+        id: release_info
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: xresloader/upload-to-github-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.release_info.outputs.tag }}
+          draft: false
+          file: '*.gem'
