@@ -137,9 +137,7 @@ GEM
     yard (0.9.26)
 
 PLATFORMS
-  x86_64-darwin-18
-  x86_64-darwin-20
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
   bundler (~> 2.2.14)
