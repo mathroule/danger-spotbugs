@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Test ${{ matrix.ruby }}
+    name: Test with Ruby ${{ matrix.ruby }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
