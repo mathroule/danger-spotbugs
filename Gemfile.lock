@@ -142,12 +142,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bundler (~> 2.0)
+  bundler (~> 2.2.14)
   danger-spotbugs!
   guard (~> 2.16.2)
   guard-rspec (~> 4.7.3)
-  listen (= 3.0.7)
-  pry (= 0.14.0)
+  listen (~> 3.0.7)
+  pry (~> 0.14.0)
   rake (~> 10.5.0)
   rspec (~> 3.10.0)
   rubocop (~> 1.11.0)
