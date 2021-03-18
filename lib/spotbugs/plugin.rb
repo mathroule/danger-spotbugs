@@ -28,7 +28,7 @@ module Danger
     # @return   [Array<String>]
     #
     def warn_on_mondays
-      warn "Trying to merge code on a Monday" if Date.today.wday == 1
+      warn 'Trying to merge code on a Monday' if Date.today.wday == 1
     end
   end
 end

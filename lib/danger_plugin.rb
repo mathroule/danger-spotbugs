@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-require "spotbugs/plugin"
+require 'spotbugs/plugin'
