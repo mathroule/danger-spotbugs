@@ -1,19 +1,29 @@
 # frozen_string_literal: true
 
 module Danger
-  # This is your plugin class. Any attributes or methods you expose here will
-  # be available from within your Dangerfile.
+  # Checks on your Gradle project's Java source files.
+  # This is done using [SpotBugs](https://spotbugs.github.io)
+  # Results are passed out as tables in markdown.
   #
-  # To be published on the Danger plugins site, you will need to have
-  # the public interface documented. Danger uses [YARD](http://yardoc.org/)
-  # for generating documentation from your plugin source, and you can verify
-  # by running `danger plugins lint` or `bundle exec rake spec`.
+  # @example Running SpotBugs with its basic configuration
   #
-  # You should replace these comments with a public description of your library.
+  #          spotbugs.report
   #
-  # @example Ensure people are well warned about merging on Mondays
+  # @example Running SpotBugs with a specific Gradle task or report file (glob accepted)
   #
-  #          my_plugin.warn_on_mondays
+  #          spotbugs.gradle_task = 'module:spotbugsRelease' # default: spotbugsRelease
+  #          spotbugs.report_file = 'module/build/reports/spotbugs/release.xml' # default: app/build/reports/spotbugs/release.xml
+  #          spotbugs.report
+  #
+  # @example Running SpotBugs with an array of report files (glob accepted)
+  #
+  #          spotbugs.report_files = ['modules/**/build/reports/spotbugs/release.xml', 'app/build/reports/spotbugs/release.xml']
+  #          spotbugs.report
+  #
+  # @example Running SpotBugs without running a Gradle task
+  #
+  #          spotbugs.skip_gradle_task = true
+  #          spotbugs.report
   #
   # @see  mathroule/danger-spotbugs
   # @tags java, android, spotbugs
