@@ -2,21 +2,21 @@
 
 <BugCollection version="4.1.1" sequence="0" timestamp="1616453271149" analysisTimestamp="1616453271213" release="unspecified">
   <Project projectName="app (spotbugsRelease)">
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/MainActivity.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/tools/Tools$Helper.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/tools/Tools$Other.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/tools/Tools.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/BuildConfig.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/model/Conversation.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/model/Message.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/model/Type.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/model/User.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/view/MainViewModel.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/view/ConversationViewHolder.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/view/ConversationAdapter.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/view/ConversationClickListener.class</Jar>
-    <Jar>/Users/github/Sample/app/build/intermediates/javac/release/classes/com/github/sample/MainActivity$1.class</Jar>
-    <AuxClasspathEntry>/Users/github/Sample/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/R.jar</AuxClasspathEntry>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/MainActivity.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/tools/Tools$Helper.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/tools/Tools$Other.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/tools/Tools.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/BuildConfig.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/model/Conversation.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/model/Message.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/model/Type.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/model/User.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/view/MainViewModel.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/view/ConversationViewHolder.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/view/ConversationAdapter.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/view/ConversationClickListener.class</Jar>
+    <Jar>/Users/github/project/Sample/app/build/intermediates/javac/release/classes/com/github/sample/MainActivity$1.class</Jar>
+    <AuxClasspathEntry>/Users/github/project/Sample/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/R.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/7e4b867e2d0f6dea75bcdd697d1f69dd/material-1.3.0-api.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/0a4b14c02b458b8b0611f5c4ae8a5d44/constraintlayout-2.0.4-api.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/683343af73498b739e2b04bcaeaf63e3/appcompat-1.2.0-api.jar</AuxClasspathEntry>
@@ -55,17 +55,17 @@
     <AuxClasspathEntry>/Users/github/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/github/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-solver/2.0.4/1f001d7db280a89a6c26b26a66eb064bb6d5efeb/constraintlayout-solver-2.0.4.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/ed4f5e49e34651c5c1122e260888ce62/jetified-annotation-experimental-1.0.0-api.jar</AuxClasspathEntry>
-    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/tools/Tools.java</SrcDir>
-    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/MainActivity.java</SrcDir>
-    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/model/Message.java</SrcDir>
-    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/model/Type.java</SrcDir>
-    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/model/User.java</SrcDir>
-    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/model/Conversation.java</SrcDir>
-    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/view/MainViewModel.java</SrcDir>
-    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/view/ConversationClickListener.java</SrcDir>
-    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/view/ConversationAdapter.java</SrcDir>
-    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/view/ConversationViewHolder.java</SrcDir>
-    <SrcDir>/Users/github/Sample/app/build/generated/source/buildConfig/release/com/github/sample/BuildConfig.java</SrcDir>
+    <SrcDir>/Users/github/project/Sample/app/src/main/java/com/github/sample/tools/Tools.java</SrcDir>
+    <SrcDir>/Users/github/project/Sample/app/src/main/java/com/github/sample/MainActivity.java</SrcDir>
+    <SrcDir>/Users/github/project/Sample/app/src/main/java/com/github/sample/model/Message.java</SrcDir>
+    <SrcDir>/Users/github/project/Sample/app/src/main/java/com/github/sample/model/Type.java</SrcDir>
+    <SrcDir>/Users/github/project/Sample/app/src/main/java/com/github/sample/model/User.java</SrcDir>
+    <SrcDir>/Users/github/project/Sample/app/src/main/java/com/github/sample/model/Conversation.java</SrcDir>
+    <SrcDir>/Users/github/project/Sample/app/src/main/java/com/github/sample/view/MainViewModel.java</SrcDir>
+    <SrcDir>/Users/github/project/Sample/app/src/main/java/com/github/sample/view/ConversationClickListener.java</SrcDir>
+    <SrcDir>/Users/github/project/Sample/app/src/main/java/com/github/sample/view/ConversationAdapter.java</SrcDir>
+    <SrcDir>/Users/github/project/Sample/app/src/main/java/com/github/sample/view/ConversationViewHolder.java</SrcDir>
+    <SrcDir>/Users/github/project/Sample/app/build/generated/source/buildConfig/release/com/github/sample/BuildConfig.java</SrcDir>
   </Project>
   <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" rank="6" abbrev="NP" category="CORRECTNESS" instanceHash="14f2ef91c09cb234637c3b3ebc9cbce9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
     <ShortMessage>Possible null pointer dereference</ShortMessage>
