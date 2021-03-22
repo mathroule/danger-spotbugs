@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.1.1" sequence="0" timestamp="1616453271149" analysisTimestamp="1616453271213" release="unspecified">
+  <Project projectName="app (spotbugsDebug)">
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/MainActivity.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/tools/Tools$Helper.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/tools/Tools$Other.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/tools/Tools.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/BuildConfig.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/model/Conversation.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/model/Message.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/model/Type.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/model/User.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/view/MainViewModel.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/view/ConversationViewHolder.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/view/ConversationAdapter.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/view/ConversationClickListener.class</Jar>
+    <Jar>/Users/github/Sample/app/build/intermediates/javac/debug/classes/com/github/sample/MainActivity$1.class</Jar>
+    <AuxClasspathEntry>/Users/github/Sample/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/7e4b867e2d0f6dea75bcdd697d1f69dd/material-1.3.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/0a4b14c02b458b8b0611f5c4ae8a5d44/constraintlayout-2.0.4-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/683343af73498b739e2b04bcaeaf63e3/appcompat-1.2.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/b68936747c61896fa532975bf0d39b4d/jetified-viewpager2-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/199a4d7295696d0246b6ff0076ca629c/recyclerview-1.1.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/30201beec5d4ef8e01196b5ac791b4b5/fragment-1.1.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/bdaa889975ef518124dc67650cd1f7b8/jetified-appcompat-resources-1.2.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/b7e347f4735e1b77fa91c9511430ac1a/drawerlayout-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/7864b887305f0fe13b89e7ac410b4c2e/coordinatorlayout-1.1.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/d2aa73a80f43aa6f3aec0fa0f0c612e6/viewpager-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/bce97611a2017f226f4f88307637344a/customview-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/572ddfdda97d22fe148eb2e08d685fbf/dynamicanimation-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/8ecbf1470d072d91138ce0211ab550fd/transition-1.2.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/cc24e64fbaa350d257282479bc7c2c56/vectordrawable-animated-1.1.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/9dd0b1ec597ae2718d0ae7bf4aac2744/vectordrawable-1.1.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/c1bfec2c4ec89ddf6f21624150df346a/legacy-support-core-utils-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/42b19e6e8e328e6b377b3b45a32caa8f/loader-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/98b2d5ba374afb2043774f9d2d814cc7/jetified-activity-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/d88d1516fa00724322e40364dd43f4dc/core-1.3.1-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/90ca9d2afbad29b01dc244f61e22d326/cursoradapter-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/1d70eb41c7fe34d5e9d3d0259c721615/versionedparcelable-1.1.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/cabcd1a0a7b5c54b0ec6d49828ba0ecc/cardview-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/94486a50fb6342af595f510821233f45/lifecycle-runtime-2.1.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/ebe64895a6d1cc9dd3c7358395ab0491/lifecycle-viewmodel-2.1.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/07e59e7d68a214448e1fde097cea512f/jetified-savedstate-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/22e18bccaf6281e78aed52ece611a147/lifecycle-livedata-2.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/c1f8835cafadf8177e87e2018688fc6c/lifecycle-livedata-core-2.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.1.0/c67e7807d9cd6c329b9d0218b2ec4e505dd340b7/lifecycle-common-2.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/1fe8b1e4c7213dafd2365c05c73e3350/core-runtime-2.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/b3152fc64428c9354344bd89848ecddc09b6f07e/core-common-2.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/439df125e5eda74c5b0f8a313a540c59/interpolator-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/c68e7aa34aa4c98de5e3ab3926503de4/documentfile-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/ada8a46d2b7afd778ad3731a9d128b0b/localbroadcastmanager-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/0b76137a87d9f98bf509cec47c3129f4/print-1.0.0-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-solver/2.0.4/1f001d7db280a89a6c26b26a66eb064bb6d5efeb/constraintlayout-solver-2.0.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/github/.gradle/caches/transforms-2/files-2.1/ed4f5e49e34651c5c1122e260888ce62/jetified-annotation-experimental-1.0.0-api.jar</AuxClasspathEntry>
+    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/tools/Tools.java</SrcDir>
+    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/MainActivity.java</SrcDir>
+    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/model/Message.java</SrcDir>
+    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/model/Type.java</SrcDir>
+    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/model/User.java</SrcDir>
+    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/model/Conversation.java</SrcDir>
+    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/view/MainViewModel.java</SrcDir>
+    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/view/ConversationClickListener.java</SrcDir>
+    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/view/ConversationAdapter.java</SrcDir>
+    <SrcDir>/Users/github/Sample/app/src/main/java/com/github/sample/view/ConversationViewHolder.java</SrcDir>
+    <SrcDir>/Users/github/Sample/app/build/generated/source/buildConfig/debug/com/github/sample/BuildConfig.java</SrcDir>
+  </Project>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" rank="6" abbrev="NP" category="CORRECTNESS" instanceHash="14f2ef91c09cb234637c3b3ebc9cbce9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of MainActivity.conversationAdapter in com.github.sample.MainActivity.onCreate(Bundle)</LongMessage>
+    <Class classname="com.github.sample.MainActivity" primary="true">
+      <SourceLine classname="com.github.sample.MainActivity" start="13" end="39" sourcefile="MainActivity.java" sourcepath="com/github/sample/MainActivity.java">
+        <Message>At MainActivity.java:[lines 13-39]</Message>
+      </SourceLine>
+      <Message>In class com.github.sample.MainActivity</Message>
+    </Class>
+    <Method classname="com.github.sample.MainActivity" name="onCreate" signature="(Landroid/os/Bundle;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.github.sample.MainActivity" start="22" end="39" startBytecode="0" endBytecode="193" sourcefile="MainActivity.java" sourcepath="com/github/sample/MainActivity.java"/>
+      <Message>In method com.github.sample.MainActivity.onCreate(Bundle)</Message>
+    </Method>
+    <Field classname="com.github.sample.MainActivity" name="conversationAdapter" signature="Lcom/github/sample/view/ConversationAdapter;" isStatic="false" primary="true" role="FIELD_CONTAINS_VALUE">
+      <SourceLine classname="com.github.sample.MainActivity" sourcefile="MainActivity.java" sourcepath="com/github/sample/MainActivity.java">
+        <Message>In MainActivity.java</Message>
+      </SourceLine>
+      <Message>Value contained in com.github.sample.MainActivity.conversationAdapter</Message>
+    </Field>
+    <SourceLine classname="com.github.sample.MainActivity" primary="true" start="29" end="29" startBytecode="42" endBytecode="42" sourcefile="MainActivity.java" sourcepath="com/github/sample/MainActivity.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at MainActivity.java:[line 29]</Message>
+    </SourceLine>
+    <SourceLine classname="com.github.sample.MainActivity" start="29" end="29" startBytecode="34" endBytecode="34" sourcefile="MainActivity.java" sourcepath="com/github/sample/MainActivity.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at MainActivity.java:[line 29]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" rank="6" abbrev="NP" category="CORRECTNESS" instanceHash="36d97a1af3badcca6f42173c474917a6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of Tools$Helper.string in com.github.sample.tools.Tools$Helper.setText(TextView)</LongMessage>
+    <Class classname="com.github.sample.tools.Tools$Helper" primary="true">
+      <SourceLine classname="com.github.sample.tools.Tools$Helper" start="23" end="33" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java">
+        <Message>At Tools.java:[lines 23-33]</Message>
+      </SourceLine>
+      <Message>In class com.github.sample.tools.Tools$Helper</Message>
+    </Class>
+    <Method classname="com.github.sample.tools.Tools$Helper" name="setText" signature="(Landroid/widget/TextView;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.github.sample.tools.Tools$Helper" start="31" end="33" startBytecode="0" endBytecode="86" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java"/>
+      <Message>In method com.github.sample.tools.Tools$Helper.setText(TextView)</Message>
+    </Method>
+    <Field classname="com.github.sample.tools.Tools$Helper" name="string" signature="Ljava/lang/String;" isStatic="false" primary="true" role="FIELD_CONTAINS_VALUE">
+      <SourceLine classname="com.github.sample.tools.Tools$Helper" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java">
+        <Message>In Tools.java</Message>
+      </SourceLine>
+      <Message>Value contained in com.github.sample.tools.Tools$Helper.string</Message>
+    </Field>
+    <SourceLine classname="com.github.sample.tools.Tools$Helper" primary="true" start="31" end="31" startBytecode="7" endBytecode="7" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at Tools.java:[line 31]</Message>
+    </SourceLine>
+    <SourceLine classname="com.github.sample.tools.Tools$Helper" start="31" end="31" startBytecode="5" endBytecode="5" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at Tools.java:[line 31]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_UNWRITTEN_FIELD" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="1651fb886d45369f319320730550021a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Read of unwritten field</ShortMessage>
+    <LongMessage>Read of unwritten field title in com.github.sample.tools.Tools$Helper.setText(TextView)</LongMessage>
+    <Class classname="com.github.sample.tools.Tools$Helper" primary="true">
+      <SourceLine classname="com.github.sample.tools.Tools$Helper" start="23" end="33" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java">
+        <Message>At Tools.java:[lines 23-33]</Message>
+      </SourceLine>
+      <Message>In class com.github.sample.tools.Tools$Helper</Message>
+    </Class>
+    <Method classname="com.github.sample.tools.Tools$Helper" name="setText" signature="(Landroid/widget/TextView;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.github.sample.tools.Tools$Helper" start="31" end="33" startBytecode="0" endBytecode="86" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java"/>
+      <Message>In method com.github.sample.tools.Tools$Helper.setText(TextView)</Message>
+    </Method>
+    <Field classname="com.github.sample.tools.Tools$Helper" name="title" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="com.github.sample.tools.Tools$Helper" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java">
+        <Message>In Tools.java</Message>
+      </SourceLine>
+      <Message>Field com.github.sample.tools.Tools$Helper.title</Message>
+    </Field>
+    <SourceLine classname="com.github.sample.tools.Tools$Helper" primary="true" start="32" end="32" startBytecode="20" endBytecode="20" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java">
+      <Message>At Tools.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="fea23dbc6037efb570062f6497bc3927" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should com.github.sample.tools.Tools$Helper be a _static_ inner class?</LongMessage>
+    <Class classname="com.github.sample.tools.Tools$Helper" primary="true">
+      <SourceLine classname="com.github.sample.tools.Tools$Helper" start="23" end="33" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java">
+        <Message>At Tools.java:[lines 23-33]</Message>
+      </SourceLine>
+      <Message>In class com.github.sample.tools.Tools$Helper</Message>
+    </Class>
+    <SourceLine classname="com.github.sample.tools.Tools$Helper" start="23" end="33" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java" synthetic="true">
+      <Message>At Tools.java:[lines 23-33]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" rank="12" abbrev="UwF" category="CORRECTNESS" instanceHash="a84aadf6a9afc3505ee39b0abfe267c8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unwritten field</ShortMessage>
+    <LongMessage>Unwritten field: com.github.sample.tools.Tools$Helper.title</LongMessage>
+    <Class classname="com.github.sample.tools.Tools$Helper" primary="true">
+      <SourceLine classname="com.github.sample.tools.Tools$Helper" start="23" end="33" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java">
+        <Message>At Tools.java:[lines 23-33]</Message>
+      </SourceLine>
+      <Message>In class com.github.sample.tools.Tools$Helper</Message>
+    </Class>
+    <Field classname="com.github.sample.tools.Tools$Helper" name="title" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="com.github.sample.tools.Tools$Helper" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java">
+        <Message>In Tools.java</Message>
+      </SourceLine>
+      <Message>Field com.github.sample.tools.Tools$Helper.title</Message>
+    </Field>
+    <SourceLine classname="com.github.sample.tools.Tools$Helper" primary="true" start="32" end="32" startBytecode="15" endBytecode="15" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java">
+      <Message>At Tools.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="8073e2e346bb32034a6243cc6ed22a3c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should com.github.sample.tools.Tools$Other be a _static_ inner class?</LongMessage>
+    <Class classname="com.github.sample.tools.Tools$Other" primary="true">
+      <SourceLine classname="com.github.sample.tools.Tools$Other" start="15" end="20" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java">
+        <Message>At Tools.java:[lines 15-20]</Message>
+      </SourceLine>
+      <Message>In class com.github.sample.tools.Tools$Other</Message>
+    </Class>
+    <SourceLine classname="com.github.sample.tools.Tools$Other" start="15" end="20" sourcefile="Tools.java" sourcepath="com/github/sample/tools/Tools.java" synthetic="true">
+      <Message>At Tools.java:[lines 15-20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="INT_BAD_COMPARISON_WITH_NONNEGATIVE_VALUE" priority="1" rank="5" abbrev="INT" category="CORRECTNESS" instanceHash="277eb5f4e73621ee0491d1161fccc096" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Bad comparison of nonnegative value with negative constant or zero</ShortMessage>
+    <LongMessage>Bad comparison of nonnegative value with -1 in com.github.sample.view.ConversationAdapter.setConversations(ArrayList)</LongMessage>
+    <Class classname="com.github.sample.view.ConversationAdapter" primary="true">
+      <SourceLine classname="com.github.sample.view.ConversationAdapter" start="9" end="37" sourcefile="ConversationAdapter.java" sourcepath="com/github/sample/view/ConversationAdapter.java">
+        <Message>At ConversationAdapter.java:[lines 9-37]</Message>
+      </SourceLine>
+      <Message>In class com.github.sample.view.ConversationAdapter</Message>
+    </Class>
+    <Method classname="com.github.sample.view.ConversationAdapter" name="setConversations" signature="(Ljava/util/ArrayList;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.github.sample.view.ConversationAdapter" start="32" end="37" startBytecode="0" endBytecode="109" sourcefile="ConversationAdapter.java" sourcepath="com/github/sample/view/ConversationAdapter.java"/>
+      <Message>In method com.github.sample.view.ConversationAdapter.setConversations(ArrayList)</Message>
+    </Method>
+    <Int value="-1" role="INT_VALUE">
+      <Message>Value -1</Message>
+    </Int>
+    <Method classname="java.util.ArrayList" name="size" signature="()I" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.util.ArrayList" start="282" end="282" startBytecode="0" endBytecode="28" sourcefile="ArrayList.java" sourcepath="java/util/ArrayList.java"/>
+      <Message>Return value of java.util.ArrayList.size() of type int</Message>
+    </Method>
+    <SourceLine classname="com.github.sample.view.ConversationAdapter" primary="true" start="32" end="32" startBytecode="5" endBytecode="5" sourcefile="ConversationAdapter.java" sourcepath="com/github/sample/view/ConversationAdapter.java">
+      <Message>At ConversationAdapter.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugPattern type="NP_NULL_ON_SOME_PATH" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Possible null pointer dereference</ShortDescription>
+    <Details><![CDATA[
+
+<p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception can't ever be executed; deciding that is beyond the ability of SpotBugs.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UWF_UNWRITTEN_FIELD" abbrev="UwF" category="CORRECTNESS">
+    <ShortDescription>Unwritten field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never written.&nbsp; All reads of it will return the default
+value. Check for errors (should it have been initialized?), or remove it if it is useless.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_UNWRITTEN_FIELD" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Read of unwritten field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The program is dereferencing a field that does not seem to ever have a non-null value written to it.
+Unless the field is initialized via some mechanism not seen by the analysis,
+dereferencing this value will generate a null pointer exception.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Should be a static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+   made static.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="INT_BAD_COMPARISON_WITH_NONNEGATIVE_VALUE" abbrev="INT" category="CORRECTNESS">
+    <ShortDescription>Bad comparison of nonnegative value with negative constant or zero</ShortDescription>
+    <Details><![CDATA[
+
+<p> This code compares a value that is guaranteed to be non-negative with a negative constant or zero.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="INT">
+    <Description>Suspicious integer expression</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="4">
+    <MissingClass>android.app.Activity</MissingClass>
+    <MissingClass>android.util.Log</MissingClass>
+    <MissingClass>android.view.View</MissingClass>
+    <MissingClass>android.widget.TextView</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 22 Mar 2021 23:47:51 +0100" total_classes="14" referenced_classes="231" total_bugs="7" total_size="172" num_packages="4" java_version="1.8.0_242-release" vm_version="25.242-b3-6915495" cpu_seconds="22.84" clock_seconds="2.65" peak_mbytes="224.15" alloc_mbytes="455.50" gc_seconds="0.14" priority_2="4" priority_1="3">
+    <FileStats path="com/github/sample/BuildConfig.java" bugCount="0" size="10"/>
+    <FileStats path="com/github/sample/MainActivity.java" bugCount="1" size="23" bugHash="3d4de8c5d2e5bc77cb5db28779c6c525"/>
+    <FileStats path="com/github/sample/model/Conversation.java" bugCount="0" size="16"/>
+    <FileStats path="com/github/sample/model/Message.java" bugCount="0" size="20"/>
+    <FileStats path="com/github/sample/model/Type.java" bugCount="0" size="11"/>
+    <FileStats path="com/github/sample/model/User.java" bugCount="0" size="16"/>
+    <FileStats path="com/github/sample/tools/Tools.java" bugCount="5" size="25" bugHash="f4054acc9c26c5455b8a4dbd032c7b07"/>
+    <FileStats path="com/github/sample/view/ConversationAdapter.java" bugCount="1" size="19" bugHash="7f51758a280a8478b184c14ebff307d8"/>
+    <FileStats path="com/github/sample/view/ConversationClickListener.java" bugCount="0" size="2"/>
+    <FileStats path="com/github/sample/view/ConversationViewHolder.java" bugCount="0" size="15"/>
+    <FileStats path="com/github/sample/view/MainViewModel.java" bugCount="0" size="15"/>
+    <PackageStats package="com.github.sample" total_bugs="1" total_types="3" total_size="33" priority_1="1">
+      <ClassStats class="com.github.sample.BuildConfig" sourceFile="BuildConfig.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.github.sample.MainActivity" sourceFile="MainActivity.java" interface="false" size="16" bugs="1" priority_1="1"/>
+      <ClassStats class="com.github.sample.MainActivity$1" sourceFile="MainActivity.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.sample.model" total_bugs="0" total_types="4" total_size="63">
+      <ClassStats class="com.github.sample.model.Conversation" sourceFile="Conversation.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.github.sample.model.Message" sourceFile="Message.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.github.sample.model.Type" sourceFile="Type.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.github.sample.model.User" sourceFile="User.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.sample.tools" total_bugs="5" total_types="3" total_size="25" priority_2="4" priority_1="1">
+      <ClassStats class="com.github.sample.tools.Tools" sourceFile="Tools.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.github.sample.tools.Tools$Helper" sourceFile="Tools.java" interface="false" size="10" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="com.github.sample.tools.Tools$Other" sourceFile="Tools.java" interface="false" size="8" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.github.sample.view" total_bugs="1" total_types="4" total_size="51" priority_1="1">
+      <ClassStats class="com.github.sample.view.ConversationAdapter" sourceFile="ConversationAdapter.java" interface="false" size="19" bugs="1" priority_1="1"/>
+      <ClassStats class="com.github.sample.view.ConversationClickListener" sourceFile="ConversationClickListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.sample.view.ConversationViewHolder" sourceFile="ConversationViewHolder.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.github.sample.view.MainViewModel" sourceFile="MainViewModel.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="315" invocations="1076" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="20284" standardDeviationMicrosecondsPerInvocation="1002"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="228" invocations="231" avgMicrosecondsPerInvocation="990" maxMicrosecondsPerInvocation="17010" standardDeviationMicrosecondsPerInvocation="2209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="208" invocations="231" avgMicrosecondsPerInvocation="902" maxMicrosecondsPerInvocation="14783" standardDeviationMicrosecondsPerInvocation="1877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="164" invocations="43" avgMicrosecondsPerInvocation="3828" maxMicrosecondsPerInvocation="158335" standardDeviationMicrosecondsPerInvocation="23841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="131" invocations="231" avgMicrosecondsPerInvocation="570" maxMicrosecondsPerInvocation="109141" standardDeviationMicrosecondsPerInvocation="7163"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="107" invocations="362" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="4988" standardDeviationMicrosecondsPerInvocation="423"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="78" invocations="231" avgMicrosecondsPerInvocation="340" maxMicrosecondsPerInvocation="6802" standardDeviationMicrosecondsPerInvocation="765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="70" invocations="1080" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="1086" standardDeviationMicrosecondsPerInvocation="60"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="66" invocations="231" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="7028" standardDeviationMicrosecondsPerInvocation="763"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="66" invocations="293" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="16463" standardDeviationMicrosecondsPerInvocation="1003"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="54" invocations="231" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="4381" standardDeviationMicrosecondsPerInvocation="456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="46" invocations="903" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="1384" standardDeviationMicrosecondsPerInvocation="108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="39" invocations="231" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="3428" standardDeviationMicrosecondsPerInvocation="398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="38" invocations="231" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="9114" standardDeviationMicrosecondsPerInvocation="640"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

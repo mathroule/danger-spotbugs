@@ -15,20 +15,12 @@ module Danger
   #
   #          my_plugin.warn_on_mondays
   #
-  # @see  Mathieu Rul/danger-spotbugs
-  # @tags monday, weekends, time, rattata
+  # @see  mathroule/danger-spotbugs
+  # @tags java, android, spotbugs
   #
   class DangerSpotBugs < Plugin
-    # An attribute that you can read/write from your Dangerfile
-    #
-    # @return   [Array<String>]
-    attr_accessor :my_attribute
+    require_relative './entity/bug_instance'
 
-    # A method that you can call from your Dangerfile
-    # @return   [Array<String>]
-    #
-    def warn_on_mondays
-      warn 'Trying to merge code on a Monday' if Date.today.wday == 1
-    end
+
   end
 end
