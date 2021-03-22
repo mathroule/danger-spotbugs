@@ -930,6 +930,8 @@ Layout/LineLength:
   # elements. Strings will be converted to Regexp objects. A line that matches
   # any regular expression listed in this option will be ignored by LineLength.
   IgnoredPatterns: []
+  Exclude:
+    - '**/*_spec.rb'
 
 Layout/MultilineArrayBraceLayout:
   Description: >-
@@ -2254,6 +2256,7 @@ Metrics/BlockLength:
     - refine
   Exclude:
     - '**/*.gemspec'
+    - '**/*_spec.rb'
 
 Metrics/BlockNesting:
   Description: 'Avoid excessive block nesting.'
