@@ -20,7 +20,5 @@ module Danger
   #
   class DangerSpotBugs < Plugin
     require_relative './entity/bug_instance'
-
-
   end
 end
