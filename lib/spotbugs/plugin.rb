@@ -15,6 +15,11 @@ module Danger
   #          spotbugs.report_file = 'module/build/reports/spotbugs/release.xml' # default: 'app/build/reports/spotbugs/release.xml'
   #          spotbugs.report
   #
+  # @example Running SpotBugs with a specific root path
+  #
+  #          spotbugs.root_path = '/Users/developer/project' # default: result of `git rev-parse --show-toplevel`
+  #          spotbugs.report
+  #
   # @example Running SpotBugs with an array of report files (glob accepted)
   #
   #          spotbugs.report_files = ['modules/**/build/reports/spotbugs/release.xml', 'app/build/reports/spotbugs/release.xml']
@@ -61,6 +66,20 @@ module Danger
     # @return [Boolean]
     def skip_gradle_task
       @skip_gradle_task ||= false
+    end
+
+    # An absolute path to a root.
+    # To comment errors to VCS, this needs to know relative path of files from the root.
+    # Defaults to result of 'git rev-parse --show-toplevel'.
+    #
+    # @return [String]
+    attr_writer :root_path
+
+    # A getter for `root_path`, returning result of `git rev-parse --show-toplevel` if value is nil.
+    #
+    # @return [String]
+    def root_path
+      @root_path ||= `git rev-parse --show-toplevel`.chomp
     end
 
     # Location of report file.
@@ -128,19 +147,73 @@ module Danger
       system "./gradlew #{gradle_task}"
     end
 
+    # A getter for `spotbugs_report`, returning SpotBugs report.
+    #
+    # @param [String] report_file The report file.
+    #
+    # @return [Oga::XML::Document]
+    def spotbugs_report(report_file)
+      require 'oga'
+      Oga.parse_xml(File.open(report_file))
+    end
+
+    # A getter for current updated files.
+    #
+    # @return [Array[String]]
+    def target_files
+      @target_files ||= (git.modified_files - git.deleted_files) + git.added_files
+    end
+
+    # A getter for SpotBugs issues, returning SpotBugs issues.
+    #
+    # @param [String] report_file The report file.
+    #
+    # @return [Array[BugInstance]]
+    def spotbugs_issues(report_file)
+      spotbugs_report = spotbugs_report(report_file)
+
+      source_dirs = spotbugs_report.xpath('//BugCollection//SrcDir').map(&:text)
+
+      spotbugs_report.xpath('//BugCollection//BugInstance').map do |bug_instance|
+        BugInstance.new(root_path, source_dirs, bug_instance)
+      end
+    end
+
     # Generate report and send inline comment with Danger's warn or fail method.
     #
     # @param [Boolean] inline_mode Report as inline comment, defaults to [true].
     #
     # @return [Array[PmdFile]]
     def do_comment(report_files, inline_mode)
+      puts "do_comment report_files: #{report_files}"
+      puts "do_comment inline_mode: #{inline_mode}"
+
       spotbugs_issues = []
 
       report_files.each do |report_file|
-        # TODO
+        puts "do_comment report_file: #{report_file}"
+        puts "do_comment target_files: #{target_files}"
+        spotbugs_issues(report_file).each do |bug_instance|
+          puts "do_comment bug_instance: #{bug_instance}"
+          puts "do_comment bug_instance.source_path: #{bug_instance.source_path}"
+          puts "do_comment bug_instance.relative_path: #{bug_instance.relative_path}"
+          next unless target_files.include? bug_instance.relative_path
+
+          spotbugs_issues.push(bug_instance)
+
+          send_comment(bug_instance, inline_mode)
+        end
       end
 
       spotbugs_issues
+    end
+
+    def send_comment(bug_instance, inline_mode)
+      if inline_mode
+        send(bug_instance.type, bug_instance.description, file: bug_instance.relative_path, line: bug_instance.line)
+      else
+        send(bug_instance.type, "#{bug_instance.relative_path} : #{bug_instance.description} at #{bug_instance.line}")
+      end
     end
   end
 end
