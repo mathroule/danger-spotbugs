@@ -6,7 +6,7 @@ require 'spotbugs/gem_version'
 
 Gem::Specification.new do |spec|
   spec.name = 'danger-spotbugs'
-  spec.version = SpotBugs::VERSION
+  spec.version = Spotbugs::VERSION
   spec.authors = ['Mathieu Rul']
   spec.email = ['mathroule@gmail.com']
   spec.description = 'A Danger plugin for SpotBugs.'

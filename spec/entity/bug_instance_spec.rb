@@ -2,7 +2,7 @@
 
 require_relative '../spec_helper'
 
-module SpotBugs
+module Spotbugs
   require 'oga'
 
   describe BugInstance do
