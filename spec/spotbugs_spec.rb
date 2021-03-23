@@ -31,6 +31,24 @@ module Danger
         @spotbugs.skip_gradle_task = true
         expect(@spotbugs.skip_gradle_task).to be_truthy
       end
+
+      it 'Report without Gradle' do
+        allow_any_instance_of(Danger::DangerSpotbugs).to receive(:target_files).and_return([])
+
+        @spotbugs.report_file = 'spec/fixtures/spotbugs_report.xml'
+        @spotbugs.skip_gradle_task = false
+
+        expect { @spotbugs.report }.to raise_error('Could not find `gradlew` inside current directory')
+      end
+
+      it 'Report without existing report file' do
+        allow_any_instance_of(Danger::DangerSpotbugs).to receive(:target_files).and_return([])
+
+        @spotbugs.report_file = 'spec/fixtures/custom/spotbugs_report.xml'
+        @spotbugs.skip_gradle_task = true
+
+        expect { @spotbugs.report }.to raise_error('Could not find matching SpotBugs report files for ["spec/fixtures/custom/spotbugs_report.xml"] inside current directory')
+      end
     end
   end
 end
