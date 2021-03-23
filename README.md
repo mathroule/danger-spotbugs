@@ -1,4 +1,5 @@
 # Danger SpotBugs
+[![Latest release](https://img.shields.io/github/v/release/mathroule/danger-spotbugs.svg)](https://github.com/mathroule/danger-spotbugs/releases/latest) [![Deploy](https://github.com/mathroule/danger-spotbugs/workflows/Deploy/badge.svg)](https://github.com/mathroule/danger-spotbugs/actions) [![codecov](https://codecov.io/gh/mathroule/danger-spotbugs/branch/main/graph/badge.svg?token=KW312ANXPN)](https://codecov.io/gh/mathroule/danger-spotbugs)
 
 Checks on your Gradle project's Java source files.
 This is done using [SpotBugs](https://spotbugs.github.io)
