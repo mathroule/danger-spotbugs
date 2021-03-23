@@ -185,18 +185,10 @@ module Danger
     #
     # @return [Array[PmdFile]]
     def do_comment(report_files, inline_mode)
-      puts "do_comment report_files: #{report_files}"
-      puts "do_comment inline_mode: #{inline_mode}"
-
       spotbugs_issues = []
 
       report_files.each do |report_file|
-        puts "do_comment report_file: #{report_file}"
-        puts "do_comment target_files: #{target_files}"
         spotbugs_issues(report_file).each do |bug_instance|
-          puts "do_comment bug_instance: #{bug_instance}"
-          puts "do_comment bug_instance.source_path: #{bug_instance.source_path}"
-          puts "do_comment bug_instance.relative_path: #{bug_instance.relative_path}"
           next unless target_files.include? bug_instance.relative_path
 
           spotbugs_issues.push(bug_instance)

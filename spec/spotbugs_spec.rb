@@ -41,6 +41,117 @@ module Danger
         expect(@spotbugs.root_path).to eq('/Users/developer/project')
       end
 
+      it 'Report with report file' do
+        # noinspection RubyLiteralArrayInspection
+        target_files = [
+          'app/src/main/java/com/github/sample/tools/Tools.java',
+          'app/src/main/java/com/github/sample/MainActivity.java',
+          'app/src/main/java/com/github/sample/model/Message.java',
+          'app/src/main/java/com/github/sample/model/User.java',
+          'app/src/main/java/com/github/sample/view/ConversationAdapter.java'
+        ]
+        allow_any_instance_of(Danger::DangerSpotbugs).to receive(:target_files).and_return(target_files)
+
+        @spotbugs.report_file = 'spec/fixtures/spotbugs_report.xml'
+        @spotbugs.root_path = '/Users/developer/project/sample/'
+        @spotbugs.skip_gradle_task = true
+
+        spotbugs_issues = @spotbugs.report
+        expect(spotbugs_issues).not_to be_nil
+        expect(spotbugs_issues.length).to be(7)
+
+        spotbugs_issue1 = spotbugs_issues[0]
+        expect(spotbugs_issue1.rank).to eq(6)
+        expect(spotbugs_issue1.line).to eq(29)
+        expect(spotbugs_issue1.type).to eq(:warn)
+        expect(spotbugs_issue1.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/MainActivity.java')
+        expect(spotbugs_issue1.relative_path).to eq('app/src/main/java/com/github/sample/MainActivity.java')
+        expect(spotbugs_issue1.description).to eq('Possible null pointer dereference of MainActivity.conversationAdapter in com.github.sample.MainActivity.onCreate(Bundle)')
+
+        spotbugs_issue2 = spotbugs_issues[1]
+        expect(spotbugs_issue2.rank).to eq(6)
+        expect(spotbugs_issue2.line).to eq(31)
+        expect(spotbugs_issue2.type).to eq(:warn)
+        expect(spotbugs_issue2.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/tools/Tools.java')
+        expect(spotbugs_issue2.relative_path).to eq('app/src/main/java/com/github/sample/tools/Tools.java')
+        expect(spotbugs_issue2.description).to eq('Possible null pointer dereference of Tools$Helper.string in com.github.sample.tools.Tools$Helper.setText(TextView)')
+
+        spotbugs_issue3 = spotbugs_issues[2]
+        expect(spotbugs_issue3.rank).to eq(8)
+        expect(spotbugs_issue3.line).to eq(32)
+        expect(spotbugs_issue3.type).to eq(:warn)
+        expect(spotbugs_issue3.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/tools/Tools.java')
+        expect(spotbugs_issue3.relative_path).to eq('app/src/main/java/com/github/sample/tools/Tools.java')
+        expect(spotbugs_issue3.description).to eq('Read of unwritten field title in com.github.sample.tools.Tools$Helper.setText(TextView)')
+
+        spotbugs_issue4 = spotbugs_issues[3]
+        expect(spotbugs_issue4.rank).to eq(18)
+        expect(spotbugs_issue4.line).to eq(23)
+        expect(spotbugs_issue4.type).to eq(:warn)
+        expect(spotbugs_issue4.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/tools/Tools.java')
+        expect(spotbugs_issue4.relative_path).to eq('app/src/main/java/com/github/sample/tools/Tools.java')
+        expect(spotbugs_issue4.description).to eq('Should com.github.sample.tools.Tools$Helper be a _static_ inner class?')
+
+        spotbugs_issue5 = spotbugs_issues[4]
+        expect(spotbugs_issue5.rank).to eq(12)
+        expect(spotbugs_issue5.line).to eq(32)
+        expect(spotbugs_issue5.type).to eq(:warn)
+        expect(spotbugs_issue5.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/tools/Tools.java')
+        expect(spotbugs_issue5.relative_path).to eq('app/src/main/java/com/github/sample/tools/Tools.java')
+        expect(spotbugs_issue5.description).to eq('Unwritten field: com.github.sample.tools.Tools$Helper.title')
+
+        spotbugs_issue6 = spotbugs_issues[5]
+        expect(spotbugs_issue6.rank).to eq(18)
+        expect(spotbugs_issue6.line).to eq(15)
+        expect(spotbugs_issue6.type).to eq(:warn)
+        expect(spotbugs_issue6.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/tools/Tools.java')
+        expect(spotbugs_issue6.relative_path).to eq('app/src/main/java/com/github/sample/tools/Tools.java')
+        expect(spotbugs_issue6.description).to eq('Should com.github.sample.tools.Tools$Other be a _static_ inner class?')
+
+        spotbugs_issue7 = spotbugs_issues[6]
+        expect(spotbugs_issue7.rank).to eq(5)
+        expect(spotbugs_issue7.line).to eq(32)
+        expect(spotbugs_issue7.type).to eq(:warn)
+        expect(spotbugs_issue7.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/view/ConversationAdapter.java')
+        expect(spotbugs_issue7.relative_path).to eq('app/src/main/java/com/github/sample/view/ConversationAdapter.java')
+        expect(spotbugs_issue7.description).to eq('Bad comparison of nonnegative value with -1 in com.github.sample.view.ConversationAdapter.setConversations(ArrayList)')
+      end
+
+      it 'Report with report file not in target files' do
+        # noinspection RubyLiteralArrayInspection
+        target_files = [
+          'app/src/main/java/com/github/sample/MainActivity.java',
+          'app/src/main/java/com/github/sample/model/Message.java',
+          'app/src/main/java/com/github/sample/model/User.java',
+          'app/src/main/java/com/github/sample/view/ConversationAdapter.java'
+        ]
+        allow_any_instance_of(Danger::DangerSpotbugs).to receive(:target_files).and_return(target_files)
+
+        @spotbugs.report_file = 'spec/fixtures/spotbugs_report.xml'
+        @spotbugs.root_path = '/Users/developer/project/sample/'
+        @spotbugs.skip_gradle_task = true
+
+        spotbugs_issues = @spotbugs.report
+        expect(spotbugs_issues).not_to be_nil
+        expect(spotbugs_issues.length).to be(2)
+
+        spotbugs_issue1 = spotbugs_issues[0]
+        expect(spotbugs_issue1.rank).to eq(6)
+        expect(spotbugs_issue1.line).to eq(29)
+        expect(spotbugs_issue1.type).to eq(:warn)
+        expect(spotbugs_issue1.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/MainActivity.java')
+        expect(spotbugs_issue1.relative_path).to eq('app/src/main/java/com/github/sample/MainActivity.java')
+        expect(spotbugs_issue1.description).to eq('Possible null pointer dereference of MainActivity.conversationAdapter in com.github.sample.MainActivity.onCreate(Bundle)')
+
+        spotbugs_issue2 = spotbugs_issues[1]
+        expect(spotbugs_issue2.rank).to eq(5)
+        expect(spotbugs_issue2.line).to eq(32)
+        expect(spotbugs_issue2.type).to eq(:warn)
+        expect(spotbugs_issue2.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/view/ConversationAdapter.java')
+        expect(spotbugs_issue2.relative_path).to eq('app/src/main/java/com/github/sample/view/ConversationAdapter.java')
+        expect(spotbugs_issue2.description).to eq('Bad comparison of nonnegative value with -1 in com.github.sample.view.ConversationAdapter.setConversations(ArrayList)')
+      end
+
       it 'Report without Gradle' do
         allow_any_instance_of(Danger::DangerSpotbugs).to receive(:target_files).and_return([])
 
@@ -57,67 +168,6 @@ module Danger
         @spotbugs.skip_gradle_task = true
 
         expect { @spotbugs.report }.to raise_error('Could not find matching SpotBugs report files for ["spec/fixtures/custom/spotbugs_report.xml"] inside current directory')
-      end
-
-      it 'Report with report file' do
-        # noinspection RubyLiteralArrayInspection
-        target_files = [
-          'app/src/main/java/com/github/sample/tools/Tools.java',
-          'app/src/main/java/com/github/sample/MainActivity.java',
-          'app/src/main/java/com/github/sample/view/ConversationAdapter.java'
-        ]
-        allow_any_instance_of(Danger::DangerSpotbugs).to receive(:target_files).and_return(target_files)
-
-        @spotbugs.report_file = 'spec/fixtures/spotbugs_report.xml'
-        @spotbugs.root_path = '/Users/developer/project/sample'
-        @spotbugs.skip_gradle_task = true
-
-        spotbugs_issues = @spotbugs.report
-        expect(spotbugs_issues).not_to be_nil
-        expect(spotbugs_issues.length).to be(4)
-
-        pmd_issue1 = spotbugs_issues[0]
-        expect(pmd_issue1).not_to be_nil
-        expect(pmd_issue1.absolute_path).to eq('/Users/developer/sample/app/src/main/java/com/android/sample/Tools.java')
-        expect(pmd_issue1.relative_path).to eq('app/src/main/java/com/android/sample/Tools.java')
-        expect(pmd_issue1.violations).not_to be_nil
-        expect(pmd_issue1.violations.length).to eq(1)
-        expect(pmd_issue1.violations.first).not_to be_nil
-        expect(pmd_issue1.violations.first.line).to eq(5)
-        expect(pmd_issue1.violations.first.description).to eq("The utility class name 'Tools' doesn't match '[A-Z][a-zA-Z0-9]+(Utils?|Helper)'")
-
-        pmd_issue2 = spotbugs_issues[1]
-        expect(pmd_issue2).not_to be_nil
-        expect(pmd_issue2.absolute_path).to eq('/Users/developer/sample/app/src/main/java/com/android/sample/MainActivity.java')
-        expect(pmd_issue2.relative_path).to eq('app/src/main/java/com/android/sample/MainActivity.java')
-        expect(pmd_issue2.violations).not_to be_nil
-        expect(pmd_issue2.violations.length).to eq(1)
-        expect(pmd_issue2.violations.first).not_to be_nil
-        expect(pmd_issue2.violations.first.line).to eq(39)
-        expect(pmd_issue2.violations.first.description).to eq("Use equals() to compare strings instead of '==' or '!='")
-
-        pmd_issue3 = spotbugs_issues[2]
-        expect(pmd_issue3).not_to be_nil
-        expect(pmd_issue3.absolute_path).to eq('/Users/developer/sample/app/src/test/java/com/android/sample/ExampleUnitTest.java')
-        expect(pmd_issue3.relative_path).to eq('app/src/test/java/com/android/sample/ExampleUnitTest.java')
-        expect(pmd_issue3.violations).not_to be_nil
-        expect(pmd_issue3.violations.length).to eq(1)
-        expect(pmd_issue3.violations.first).not_to be_nil
-        expect(pmd_issue3.violations.first.line).to eq(15)
-        expect(pmd_issue3.violations.first.description).to eq("The JUnit 4 test method name 'addition_isCorrect' doesn't match '[a-z][a-zA-Z0-9]*'")
-
-        pmd_issue4 = spotbugs_issues[3]
-        expect(pmd_issue4).not_to be_nil
-        expect(pmd_issue4.absolute_path).to eq('/Users/developer/sample/app/src/test/java/com/android/sample/ToolsTest.java')
-        expect(pmd_issue4.relative_path).to eq('app/src/test/java/com/android/sample/ToolsTest.java')
-        expect(pmd_issue4.violations).not_to be_nil
-        expect(pmd_issue4.violations.length).to eq(2)
-        expect(pmd_issue4.violations[0]).not_to be_nil
-        expect(pmd_issue4.violations[0].line).to eq(12)
-        expect(pmd_issue4.violations[0].description).to eq("The JUnit 4 test method name 'getLabel_1' doesn't match '[a-z][a-zA-Z0-9]*'")
-        expect(pmd_issue4.violations[1]).not_to be_nil
-        expect(pmd_issue4.violations[1].line).to eq(18)
-        expect(pmd_issue4.violations[1].description).to eq("The JUnit 4 test method name 'getLabel_2' doesn't match '[a-z][a-zA-Z0-9]*'")
       end
     end
   end

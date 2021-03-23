@@ -17,6 +17,7 @@ module Spotbugs
       expect(bug_instance.rank).to eq(6)
       expect(bug_instance.line).to eq(29)
       expect(bug_instance.type).to eq(:warn)
+      expect(bug_instance.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/MainActivity.java')
       expect(bug_instance.relative_path).to eq('app/src/main/java/com/github/sample/MainActivity.java')
       expect(bug_instance.description).to eq('Possible null pointer dereference of MainActivity.conversationAdapter in com.github.sample.MainActivity.onCreate(Bundle)')
     end
@@ -32,6 +33,7 @@ module Spotbugs
       expect(bug_instance.rank).to eq(6)
       expect(bug_instance.line).to eq(29)
       expect(bug_instance.type).to eq(:warn)
+      expect(bug_instance.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/MainActivity.java')
       expect(bug_instance.relative_path).to eq('app/src/main/java/com/github/sample/MainActivity.java')
       expect(bug_instance.description).to eq('Possible null pointer dereference of MainActivity.conversationAdapter in com.github.sample.MainActivity.onCreate(Bundle)')
     end
@@ -47,6 +49,7 @@ module Spotbugs
       expect(bug_instance.rank).to eq(6)
       expect(bug_instance.line).to eq(29)
       expect(bug_instance.type).to eq(:warn)
+      expect(bug_instance.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/MainActivity.java')
       expect(bug_instance.relative_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/MainActivity.java')
       expect(bug_instance.description).to eq('Possible null pointer dereference of MainActivity.conversationAdapter in com.github.sample.MainActivity.onCreate(Bundle)')
     end
@@ -62,6 +65,7 @@ module Spotbugs
       expect(bug_instance.rank).to eq(6)
       expect(bug_instance.line).to eq(31)
       expect(bug_instance.type).to eq(:warn)
+      expect(bug_instance.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/tools/Tools.java')
       expect(bug_instance.relative_path).to eq('app/src/main/java/com/github/sample/tools/Tools.java')
       expect(bug_instance.description).to eq('Possible null pointer dereference of Tools$Helper.string in com.github.sample.tools.Tools$Helper.setText(TextView)')
     end
@@ -77,6 +81,7 @@ module Spotbugs
       expect(bug_instance.rank).to eq(8)
       expect(bug_instance.line).to eq(32)
       expect(bug_instance.type).to eq(:warn)
+      expect(bug_instance.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/tools/Tools.java')
       expect(bug_instance.relative_path).to eq('app/src/main/java/com/github/sample/tools/Tools.java')
       expect(bug_instance.description).to eq('Read of unwritten field title in com.github.sample.tools.Tools$Helper.setText(TextView)')
     end
@@ -92,6 +97,7 @@ module Spotbugs
       expect(bug_instance.rank).to eq(18)
       expect(bug_instance.line).to eq(23)
       expect(bug_instance.type).to eq(:warn)
+      expect(bug_instance.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/tools/Tools.java')
       expect(bug_instance.relative_path).to eq('app/src/main/java/com/github/sample/tools/Tools.java')
       expect(bug_instance.description).to eq('Should com.github.sample.tools.Tools$Helper be a _static_ inner class?')
     end
@@ -107,6 +113,7 @@ module Spotbugs
       expect(bug_instance.rank).to eq(12)
       expect(bug_instance.line).to eq(32)
       expect(bug_instance.type).to eq(:warn)
+      expect(bug_instance.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/tools/Tools.java')
       expect(bug_instance.relative_path).to eq('app/src/main/java/com/github/sample/tools/Tools.java')
       expect(bug_instance.description).to eq('Unwritten field: com.github.sample.tools.Tools$Helper.title')
     end
@@ -122,6 +129,7 @@ module Spotbugs
       expect(bug_instance.rank).to eq(18)
       expect(bug_instance.line).to eq(15)
       expect(bug_instance.type).to eq(:warn)
+      expect(bug_instance.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/tools/Tools.java')
       expect(bug_instance.relative_path).to eq('app/src/main/java/com/github/sample/tools/Tools.java')
       expect(bug_instance.description).to eq('Should com.github.sample.tools.Tools$Other be a _static_ inner class?')
     end
@@ -137,6 +145,7 @@ module Spotbugs
       expect(bug_instance.rank).to eq(5)
       expect(bug_instance.line).to eq(32)
       expect(bug_instance.type).to eq(:warn)
+      expect(bug_instance.absolute_path).to eq('/Users/developer/project/sample/app/src/main/java/com/github/sample/view/ConversationAdapter.java')
       expect(bug_instance.relative_path).to eq('app/src/main/java/com/github/sample/view/ConversationAdapter.java')
       expect(bug_instance.description).to eq('Bad comparison of nonnegative value with -1 in com.github.sample.view.ConversationAdapter.setConversations(ArrayList)')
     end

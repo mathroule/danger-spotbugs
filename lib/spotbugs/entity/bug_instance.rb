@@ -3,7 +3,7 @@
 # Represent a BugInstance.
 class BugInstance
   RANK_ERROR_THRESHOLD = 4
-  attr_reader :relative_path
+  attr_reader :absolute_path, :relative_path
   attr_accessor :source_dirs, :bug_instance
 
   def initialize(prefix, source_dirs, bug_instance)
@@ -11,12 +11,13 @@ class BugInstance
     @bug_instance = bug_instance
 
     source_path = bug_instance.xpath('SourceLine').attribute('sourcepath').first.value.to_s
-    absolute_path = get_absolute_path(source_path)
+    @absolute_path = get_absolute_path(source_path)
+
     prefix += (prefix.end_with?(file_separator) ? '' : file_separator)
-    @relative_path = if absolute_path.start_with?(prefix)
-                       absolute_path[prefix.length, absolute_path.length - prefix.length]
+    @relative_path = if @absolute_path.start_with?(prefix)
+                       @absolute_path[prefix.length, @absolute_path.length - prefix.length]
                      else
-                       absolute_path
+                       @absolute_path
                      end
   end
 
