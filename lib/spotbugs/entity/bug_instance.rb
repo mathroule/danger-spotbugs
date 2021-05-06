@@ -10,15 +10,11 @@ class BugInstance
     @source_dirs = source_dirs
     @bug_instance = bug_instance
 
-    source_path = bug_instance.xpath('SourceLine').attribute('sourcepath').compact.first.value.to_s
+    source_path = get_source_path(bug_instance)
     @absolute_path = get_absolute_path(source_path)
 
     prefix += (prefix.end_with?(file_separator) ? '' : file_separator)
-    @relative_path = if @absolute_path.start_with?(prefix)
-                       @absolute_path[prefix.length, @absolute_path.length - prefix.length]
-                     else
-                       @absolute_path
-                     end
+    @relative_path = get_relative_path(prefix, @absolute_path)
   end
 
   def rank
@@ -39,9 +35,21 @@ class BugInstance
 
   private
 
+  def get_source_path(bug_instance)
+    bug_instance.xpath('SourceLine').attribute('sourcepath').compact.first.value.to_s
+  end
+
   def get_absolute_path(source_path)
     @source_dirs.map do |source_dir|
       return source_dir if source_dir.end_with?(source_path)
+    end
+  end
+
+  def get_relative_path(prefix, absolute_path)
+    if absolute_path.start_with?(prefix)
+      absolute_path[prefix.length, absolute_path.length - prefix.length]
+    else
+      absolute_path
     end
   end
 
