@@ -10,7 +10,7 @@ class BugInstance
     @source_dirs = source_dirs
     @bug_instance = bug_instance
 
-    source_path = bug_instance.xpath('SourceLine').attribute('sourcepath').first.value.to_s
+    source_path = bug_instance.xpath('SourceLine').attribute('sourcepath').compact.first.value.to_s
     @absolute_path = get_absolute_path(source_path)
 
     prefix += (prefix.end_with?(file_separator) ? '' : file_separator)
@@ -30,7 +30,7 @@ class BugInstance
   end
 
   def line
-    @line ||= bug_instance.xpath('SourceLine').attribute('start').first.value.to_i
+    @line ||= bug_instance.xpath('SourceLine').attribute('start').compact.first.value.to_i
   end
 
   def description
