@@ -26,7 +26,7 @@ class BugInstance
   end
 
   def line
-    @line ||= bug_instance.xpath('SourceLine').attribute('start').compact.first.value.to_i
+    @line ||= get_value_safely(bug_instance.xpath('SourceLine').attribute('start'), 0).to_i
   end
 
   def description
@@ -36,7 +36,7 @@ class BugInstance
   private
 
   def get_source_path(bug_instance)
-    bug_instance.xpath('SourceLine').attribute('sourcepath').compact.first.value.to_s
+    get_value_safely(bug_instance.xpath('SourceLine').attribute('sourcepath'), '').to_s
   end
 
   def get_absolute_path(source_path)
@@ -55,5 +55,9 @@ class BugInstance
 
   def file_separator
     File::ALT_SEPARATOR || File::SEPARATOR
+  end
+
+  def get_value_safely(array, default_value)
+    array.compact.empty? ? default_value : array.compact.first.value
   end
 end
