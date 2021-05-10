@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.1.1" sequence="0" timestamp="1616453271149" analysisTimestamp="1616453271213" release="unspecified">
+<BugCollection version="4.1.1" sequence="0" timestamp="1620640532485" analysisTimestamp="1620640532486" release="unspecified">
   <Project projectName="app (spotbugsRelease)">
     <Jar>/Users/developer/project/sample/app/build/intermediates/javac/release/classes/com/github/sample/MainActivity.class</Jar>
     <Jar>/Users/developer/project/sample/app/build/intermediates/javac/release/classes/com/github/sample/tools/Tools$Helper.class</Jar>
@@ -204,7 +204,7 @@
       <Message>Value -1</Message>
     </Int>
     <Method classname="java.util.ArrayList" name="size" signature="()I" isStatic="false" role="METHOD_RETURN_VALUE_OF">
-      <SourceLine classname="java.util.ArrayList" start="282" end="282" startBytecode="0" endBytecode="28" sourcefile="ArrayList.java" sourcepath="java/util/ArrayList.java"/>
+      <SourceLine classname="java.util.ArrayList" start="285" end="285" startBytecode="0" endBytecode="64" sourcefile="ArrayList.java" sourcepath="java/util/ArrayList.java"/>
       <Message>Return value of java.util.ArrayList.size() of type int</Message>
     </Method>
     <SourceLine classname="com.github.sample.view.ConversationAdapter" primary="true" start="32" end="32" startBytecode="5" endBytecode="5" sourcefile="ConversationAdapter.java" sourcepath="com/github/sample/view/ConversationAdapter.java">
@@ -290,8 +290,8 @@ dereferencing this value will generate a null pointer exception.
     <MissingClass>android.view.View</MissingClass>
     <MissingClass>android.widget.TextView</MissingClass>
   </Errors>
-  <FindBugsSummary timestamp="Mon, 22 Mar 2021 23:47:51 +0100" total_classes="14" referenced_classes="231" total_bugs="7" total_size="172" num_packages="4" java_version="1.8.0_242-release" vm_version="25.242-b3-6915495" cpu_seconds="22.84" clock_seconds="2.65" peak_mbytes="224.15" alloc_mbytes="455.50" gc_seconds="0.14" priority_2="4" priority_1="3">
-    <FileStats path="com/github/sample/BuildConfig.java" bugCount="0" size="10"/>
+  <FindBugsSummary timestamp="Mon, 10 May 2021 11:55:32 +0200" total_classes="14" referenced_classes="232" total_bugs="7" total_size="170" num_packages="4" java_version="11.0.10" vm_version="11.0.10+9" cpu_seconds="2.77" clock_seconds="1.14" peak_mbytes="387.02" alloc_mbytes="512.00" gc_seconds="0.01" priority_2="4" priority_1="3">
+    <FileStats path="com/github/sample/BuildConfig.java" bugCount="0" size="8"/>
     <FileStats path="com/github/sample/MainActivity.java" bugCount="1" size="23" bugHash="3d4de8c5d2e5bc77cb5db28779c6c525"/>
     <FileStats path="com/github/sample/model/Conversation.java" bugCount="0" size="16"/>
     <FileStats path="com/github/sample/model/Message.java" bugCount="0" size="20"/>
@@ -302,8 +302,8 @@ dereferencing this value will generate a null pointer exception.
     <FileStats path="com/github/sample/view/ConversationClickListener.java" bugCount="0" size="2"/>
     <FileStats path="com/github/sample/view/ConversationViewHolder.java" bugCount="0" size="15"/>
     <FileStats path="com/github/sample/view/MainViewModel.java" bugCount="0" size="15"/>
-    <PackageStats package="com.github.sample" total_bugs="1" total_types="3" total_size="33" priority_1="1">
-      <ClassStats class="com.github.sample.BuildConfig" sourceFile="BuildConfig.java" interface="false" size="10" bugs="0"/>
+    <PackageStats package="com.github.sample" total_bugs="1" total_types="3" total_size="31" priority_1="1">
+      <ClassStats class="com.github.sample.BuildConfig" sourceFile="BuildConfig.java" interface="false" size="8" bugs="0"/>
       <ClassStats class="com.github.sample.MainActivity" sourceFile="MainActivity.java" interface="false" size="16" bugs="1" priority_1="1"/>
       <ClassStats class="com.github.sample.MainActivity$1" sourceFile="MainActivity.java" interface="false" size="7" bugs="0"/>
     </PackageStats>
@@ -325,20 +325,15 @@ dereferencing this value will generate a null pointer exception.
       <ClassStats class="com.github.sample.view.MainViewModel" sourceFile="MainViewModel.java" interface="false" size="15" bugs="0"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="315" invocations="1076" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="20284" standardDeviationMicrosecondsPerInvocation="1002"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="228" invocations="231" avgMicrosecondsPerInvocation="990" maxMicrosecondsPerInvocation="17010" standardDeviationMicrosecondsPerInvocation="2209"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="208" invocations="231" avgMicrosecondsPerInvocation="902" maxMicrosecondsPerInvocation="14783" standardDeviationMicrosecondsPerInvocation="1877"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="164" invocations="43" avgMicrosecondsPerInvocation="3828" maxMicrosecondsPerInvocation="158335" standardDeviationMicrosecondsPerInvocation="23841"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="131" invocations="231" avgMicrosecondsPerInvocation="570" maxMicrosecondsPerInvocation="109141" standardDeviationMicrosecondsPerInvocation="7163"/>
-      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="107" invocations="362" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="4988" standardDeviationMicrosecondsPerInvocation="423"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="78" invocations="231" avgMicrosecondsPerInvocation="340" maxMicrosecondsPerInvocation="6802" standardDeviationMicrosecondsPerInvocation="765"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="70" invocations="1080" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="1086" standardDeviationMicrosecondsPerInvocation="60"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="66" invocations="231" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="7028" standardDeviationMicrosecondsPerInvocation="763"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="66" invocations="293" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="16463" standardDeviationMicrosecondsPerInvocation="1003"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="54" invocations="231" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="4381" standardDeviationMicrosecondsPerInvocation="456"/>
-      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="46" invocations="903" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="1384" standardDeviationMicrosecondsPerInvocation="108"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="39" invocations="231" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="3428" standardDeviationMicrosecondsPerInvocation="398"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="38" invocations="231" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="9114" standardDeviationMicrosecondsPerInvocation="640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="305" invocations="1115" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="10766" standardDeviationMicrosecondsPerInvocation="689"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="115" invocations="232" avgMicrosecondsPerInvocation="499" maxMicrosecondsPerInvocation="10422" standardDeviationMicrosecondsPerInvocation="1203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="112" invocations="232" avgMicrosecondsPerInvocation="483" maxMicrosecondsPerInvocation="9921" standardDeviationMicrosecondsPerInvocation="1109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="55" invocations="1120" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="2129" standardDeviationMicrosecondsPerInvocation="99"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="51" invocations="363" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="2677" standardDeviationMicrosecondsPerInvocation="200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="38" invocations="232" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="4259" standardDeviationMicrosecondsPerInvocation="492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="38" invocations="232" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="2146" standardDeviationMicrosecondsPerInvocation="303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="36" invocations="232" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="2760" standardDeviationMicrosecondsPerInvocation="324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="940" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="1125" standardDeviationMicrosecondsPerInvocation="71"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>
