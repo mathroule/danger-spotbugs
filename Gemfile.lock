@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    danger-spotbugs (0.0.4)
+    danger-spotbugs (1.0.0)
       danger-plugin-api (~> 1.0)
       oga (~> 2.15)
 
