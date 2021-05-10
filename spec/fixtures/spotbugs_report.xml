@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.1.1" sequence="0" timestamp="1620640532485" analysisTimestamp="1620640532486" release="unspecified">
+<BugCollection version="4.1.1" sequence="0" timestamp="1620641501525" analysisTimestamp="1620641501684" release="unspecified">
   <Project projectName="app (spotbugsRelease)">
     <Jar>/Users/developer/project/sample/app/build/intermediates/javac/release/classes/com/github/sample/MainActivity.class</Jar>
     <Jar>/Users/developer/project/sample/app/build/intermediates/javac/release/classes/com/github/sample/tools/Tools$Helper.class</Jar>
@@ -91,6 +91,82 @@
     </SourceLine>
     <SourceLine classname="com.github.sample.MainActivity" start="29" end="29" startBytecode="34" endBytecode="34" sourcefile="MainActivity.java" sourcepath="com/github/sample/MainActivity.java" role="SOURCE_LINE_KNOWN_NULL">
       <Message>Known null at MainActivity.java:[line 29]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NONNULL_RETURN_VIOLATION" priority="1" rank="6" abbrev="NP" category="CORRECTNESS" instanceHash="3fed666a46df9026e83022b1d37620b0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Method may return null, but is declared @Nonnull</ShortMessage>
+    <LongMessage>com.github.sample.model.Message.getProperties() may return null, but is declared @Nonnull</LongMessage>
+    <Class classname="com.github.sample.model.Message" primary="true">
+      <SourceLine classname="com.github.sample.model.Message" start="20" end="50" sourcefile="Message.java" sourcepath="com/github/sample/model/Message.java">
+        <Message>At Message.java:[lines 20-50]</Message>
+      </SourceLine>
+      <Message>In class com.github.sample.model.Message</Message>
+    </Class>
+    <Method classname="com.github.sample.model.Message" name="getProperties" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="com.github.sample.model.Message" start="45" end="45" startBytecode="0" endBytecode="46" sourcefile="Message.java" sourcepath="com/github/sample/model/Message.java"/>
+      <Message>In method com.github.sample.model.Message.getProperties()</Message>
+    </Method>
+    <Field classname="com.github.sample.model.Message" name="properties" signature="Ljava/lang/String;" isStatic="false" primary="true" role="FIELD_CONTAINS_VALUE">
+      <SourceLine classname="com.github.sample.model.Message" sourcefile="Message.java" sourcepath="com/github/sample/model/Message.java">
+        <Message>In Message.java</Message>
+      </SourceLine>
+      <Message>Value contained in com.github.sample.model.Message.properties</Message>
+    </Field>
+    <SourceLine classname="com.github.sample.model.Message" primary="true" start="45" end="45" startBytecode="4" endBytecode="4" sourcefile="Message.java" sourcepath="com/github/sample/model/Message.java" role="SOURCE_LINE_RETURNED">
+      <Message>Returned at Message.java:[line 45]</Message>
+    </SourceLine>
+    <SourceLine classname="com.github.sample.model.Message" start="45" end="45" startBytecode="4" endBytecode="4" sourcefile="Message.java" sourcepath="com/github/sample/model/Message.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at Message.java:[line 45]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="1" rank="14" abbrev="Se" category="BAD_PRACTICE" instanceHash="44742cc905f428a65c6dd14ac2daae78" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Non-transient non-serializable instance field in serializable class</ShortMessage>
+    <LongMessage>Class com.github.sample.model.Message defines non-transient non-serializable instance field conversation</LongMessage>
+    <Class classname="com.github.sample.model.Message" primary="true">
+      <SourceLine classname="com.github.sample.model.Message" start="20" end="50" sourcefile="Message.java" sourcepath="com/github/sample/model/Message.java">
+        <Message>At Message.java:[lines 20-50]</Message>
+      </SourceLine>
+      <Message>In class com.github.sample.model.Message</Message>
+    </Class>
+    <Field classname="com.github.sample.model.Message" name="conversation" signature="Lcom/github/sample/model/Conversation;" isStatic="false" primary="true">
+      <SourceLine classname="com.github.sample.model.Message" sourcefile="Message.java" sourcepath="com/github/sample/model/Message.java">
+        <Message>In Message.java</Message>
+      </SourceLine>
+      <Message>Field com.github.sample.model.Message.conversation</Message>
+    </Field>
+    <Type descriptor="Lcom/github/sample/model/Conversation;" role="TYPE_FOUND">
+      <SourceLine classname="com.github.sample.model.Conversation" start="11" end="26" sourcefile="Conversation.java" sourcepath="com/github/sample/model/Conversation.java">
+        <Message>At Conversation.java:[lines 11-26]</Message>
+      </SourceLine>
+      <Message>Actual type com.github.sample.model.Conversation</Message>
+    </Type>
+    <SourceLine classname="com.github.sample.model.Message" sourcefile="Message.java" sourcepath="com/github/sample/model/Message.java" synthetic="true">
+      <Message>In Message.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="1" rank="14" abbrev="Se" category="BAD_PRACTICE" instanceHash="5c07870442e74a0a719c0059c999090e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Non-transient non-serializable instance field in serializable class</ShortMessage>
+    <LongMessage>Class com.github.sample.model.Message defines non-transient non-serializable instance field sender</LongMessage>
+    <Class classname="com.github.sample.model.Message" primary="true">
+      <SourceLine classname="com.github.sample.model.Message" start="20" end="50" sourcefile="Message.java" sourcepath="com/github/sample/model/Message.java">
+        <Message>At Message.java:[lines 20-50]</Message>
+      </SourceLine>
+      <Message>In class com.github.sample.model.Message</Message>
+    </Class>
+    <Field classname="com.github.sample.model.Message" name="sender" signature="Lcom/github/sample/model/User;" isStatic="false" primary="true">
+      <SourceLine classname="com.github.sample.model.Message" sourcefile="Message.java" sourcepath="com/github/sample/model/Message.java">
+        <Message>In Message.java</Message>
+      </SourceLine>
+      <Message>Field com.github.sample.model.Message.sender</Message>
+    </Field>
+    <Type descriptor="Lcom/github/sample/model/User;" role="TYPE_FOUND">
+      <SourceLine classname="com.github.sample.model.User" start="11" end="26" sourcefile="User.java" sourcepath="com/github/sample/model/User.java">
+        <Message>At User.java:[lines 11-26]</Message>
+      </SourceLine>
+      <Message>Actual type com.github.sample.model.User</Message>
+    </Type>
+    <SourceLine classname="com.github.sample.model.Message" sourcefile="Message.java" sourcepath="com/github/sample/model/Message.java" synthetic="true">
+      <Message>In Message.java</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" rank="6" abbrev="NP" category="CORRECTNESS" instanceHash="36d97a1af3badcca6f42173c474917a6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
@@ -211,6 +287,9 @@
       <Message>At ConversationAdapter.java:[line 32]</Message>
     </SourceLine>
   </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
   <BugCategory category="CORRECTNESS">
     <Description>Correctness</Description>
   </BugCategory>
@@ -229,6 +308,17 @@ the null pointer exception can't ever be executed; deciding that is beyond the a
 </p>
 
     ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NONNULL_RETURN_VIOLATION" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Method may return null, but is declared @Nonnull</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      This method may return a null value, but the method (or a superclass method
+      which it overrides) is declared to return @Nonnull.
+      </p>
+      
+   ]]></Details>
   </BugPattern>
   <BugPattern type="UWF_UNWRITTEN_FIELD" abbrev="UwF" category="CORRECTNESS">
     <ShortDescription>Unwritten field</ShortDescription>
@@ -263,6 +353,19 @@ dereferencing this value will generate a null pointer exception.
 
     ]]></Details>
   </BugPattern>
+  <BugPattern type="SE_BAD_FIELD" abbrev="Se" category="BAD_PRACTICE">
+    <ShortDescription>Non-transient non-serializable instance field in serializable class</ShortDescription>
+    <Details><![CDATA[
+
+<p> This Serializable class defines a non-primitive instance field which is neither transient,
+Serializable, or <code>java.lang.Object</code>, and does not appear to implement
+the <code>Externalizable</code> interface or the
+<code>readObject()</code> and <code>writeObject()</code> methods.&nbsp;
+Objects of this class will not be deserialized correctly if a non-Serializable
+object is stored in this field.</p>
+
+    ]]></Details>
+  </BugPattern>
   <BugPattern type="INT_BAD_COMPARISON_WITH_NONNEGATIVE_VALUE" abbrev="INT" category="CORRECTNESS">
     <ShortDescription>Bad comparison of nonnegative value with negative constant or zero</ShortDescription>
     <Details><![CDATA[
@@ -274,6 +377,9 @@ dereferencing this value will generate a null pointer exception.
   </BugPattern>
   <BugCode abbrev="NP" cweid="476">
     <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="Se">
+    <Description>Incorrect definition of Serializable class</Description>
   </BugCode>
   <BugCode abbrev="UwF">
     <Description>Unwritten field</Description>
@@ -290,11 +396,11 @@ dereferencing this value will generate a null pointer exception.
     <MissingClass>android.view.View</MissingClass>
     <MissingClass>android.widget.TextView</MissingClass>
   </Errors>
-  <FindBugsSummary timestamp="Mon, 10 May 2021 11:55:32 +0200" total_classes="14" referenced_classes="232" total_bugs="7" total_size="170" num_packages="4" java_version="11.0.10" vm_version="11.0.10+9" cpu_seconds="2.77" clock_seconds="1.14" peak_mbytes="387.02" alloc_mbytes="512.00" gc_seconds="0.01" priority_2="4" priority_1="3">
+  <FindBugsSummary timestamp="Mon, 10 May 2021 12:11:41 +0200" total_classes="14" referenced_classes="232" total_bugs="10" total_size="176" num_packages="4" java_version="11.0.10" vm_version="11.0.10+9" cpu_seconds="7.96" clock_seconds="3.13" peak_mbytes="245.68" alloc_mbytes="512.00" gc_seconds="0.03" priority_2="4" priority_1="6">
     <FileStats path="com/github/sample/BuildConfig.java" bugCount="0" size="8"/>
     <FileStats path="com/github/sample/MainActivity.java" bugCount="1" size="23" bugHash="3d4de8c5d2e5bc77cb5db28779c6c525"/>
     <FileStats path="com/github/sample/model/Conversation.java" bugCount="0" size="16"/>
-    <FileStats path="com/github/sample/model/Message.java" bugCount="0" size="20"/>
+    <FileStats path="com/github/sample/model/Message.java" bugCount="3" size="26" bugHash="d95b4d13e0ff01bd6f699166cd212709"/>
     <FileStats path="com/github/sample/model/Type.java" bugCount="0" size="11"/>
     <FileStats path="com/github/sample/model/User.java" bugCount="0" size="16"/>
     <FileStats path="com/github/sample/tools/Tools.java" bugCount="5" size="25" bugHash="f4054acc9c26c5455b8a4dbd032c7b07"/>
@@ -307,9 +413,9 @@ dereferencing this value will generate a null pointer exception.
       <ClassStats class="com.github.sample.MainActivity" sourceFile="MainActivity.java" interface="false" size="16" bugs="1" priority_1="1"/>
       <ClassStats class="com.github.sample.MainActivity$1" sourceFile="MainActivity.java" interface="false" size="7" bugs="0"/>
     </PackageStats>
-    <PackageStats package="com.github.sample.model" total_bugs="0" total_types="4" total_size="63">
+    <PackageStats package="com.github.sample.model" total_bugs="3" total_types="4" total_size="69" priority_1="3">
       <ClassStats class="com.github.sample.model.Conversation" sourceFile="Conversation.java" interface="false" size="16" bugs="0"/>
-      <ClassStats class="com.github.sample.model.Message" sourceFile="Message.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.github.sample.model.Message" sourceFile="Message.java" interface="false" size="26" bugs="3" priority_1="3"/>
       <ClassStats class="com.github.sample.model.Type" sourceFile="Type.java" interface="false" size="11" bugs="0"/>
       <ClassStats class="com.github.sample.model.User" sourceFile="User.java" interface="false" size="16" bugs="0"/>
     </PackageStats>
@@ -325,15 +431,17 @@ dereferencing this value will generate a null pointer exception.
       <ClassStats class="com.github.sample.view.MainViewModel" sourceFile="MainViewModel.java" interface="false" size="15" bugs="0"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="305" invocations="1115" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="10766" standardDeviationMicrosecondsPerInvocation="689"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="115" invocations="232" avgMicrosecondsPerInvocation="499" maxMicrosecondsPerInvocation="10422" standardDeviationMicrosecondsPerInvocation="1203"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="112" invocations="232" avgMicrosecondsPerInvocation="483" maxMicrosecondsPerInvocation="9921" standardDeviationMicrosecondsPerInvocation="1109"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="55" invocations="1120" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="2129" standardDeviationMicrosecondsPerInvocation="99"/>
-      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="51" invocations="363" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="2677" standardDeviationMicrosecondsPerInvocation="200"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="38" invocations="232" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="4259" standardDeviationMicrosecondsPerInvocation="492"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="38" invocations="232" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="2146" standardDeviationMicrosecondsPerInvocation="303"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="36" invocations="232" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="2760" standardDeviationMicrosecondsPerInvocation="324"/>
-      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="940" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="1125" standardDeviationMicrosecondsPerInvocation="71"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="626" invocations="1115" avgMicrosecondsPerInvocation="562" maxMicrosecondsPerInvocation="20203" standardDeviationMicrosecondsPerInvocation="1376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="257" invocations="232" avgMicrosecondsPerInvocation="1110" maxMicrosecondsPerInvocation="14526" standardDeviationMicrosecondsPerInvocation="2404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="248" invocations="232" avgMicrosecondsPerInvocation="1072" maxMicrosecondsPerInvocation="17254" standardDeviationMicrosecondsPerInvocation="2383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="160" invocations="1120" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="6404" standardDeviationMicrosecondsPerInvocation="278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="123" invocations="365" avgMicrosecondsPerInvocation="339" maxMicrosecondsPerInvocation="5431" standardDeviationMicrosecondsPerInvocation="526"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="108" invocations="232" avgMicrosecondsPerInvocation="469" maxMicrosecondsPerInvocation="8119" standardDeviationMicrosecondsPerInvocation="1064"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="96" invocations="232" avgMicrosecondsPerInvocation="417" maxMicrosecondsPerInvocation="9079" standardDeviationMicrosecondsPerInvocation="1138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="81" invocations="294" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="19521" standardDeviationMicrosecondsPerInvocation="1327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="70" invocations="232" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="16789" standardDeviationMicrosecondsPerInvocation="1224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="70" invocations="940" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="2091" standardDeviationMicrosecondsPerInvocation="156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="56" invocations="232" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="4025" standardDeviationMicrosecondsPerInvocation="446"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>
